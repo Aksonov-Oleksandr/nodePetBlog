@@ -1,0 +1,33 @@
+<html lang="en">
+<%- include('./partials/head.ejs')%>
+<body style="display: flex;align-items: center;justify-content: center">
+<%- include('./partials/nav.ejs')%>
+<article class="post">
+    <h2><%=post.title%></h2>
+    <p><%=post.text%></p>
+    <div class="info">
+        <span><%=post.createdAt.toLocaleDateString()%></span>
+        <span><%=post.author%></span>
+    </div>
+    <button class="delete-btn" data-id="<% post.id %>>">
+        <i class="fa-solid fa-trash " data-id="<% post.id %>"></i>
+    </button>
+    <a href="/edit-post/<%= post.id %>" class="edit-btn" data-id="<% post.id %>>">
+        <i class="fa-solid fa-pen" data-id="<% post.id %>"></i>
+    </a>
+</article>
+<script>
+    let delBtn = document.querySelector('.delete-btn')
+     delBtn.addEventListener('click',(event)=>{
+        let id = event.target?.dataset?.id||null;
+        if(id){
+            fetch(`/posts/${id}`,{
+                method:'DELETE'
+            }).then(()=>window.location.href = '/posts');
+
+        }
+    })
+
+</script>
+</body>
+</html>

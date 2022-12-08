@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Noto Sans','sans-serif';
+    font-size: 20px;
+    background: linear-gradient(to top,aquamarine,skyblue);
+    color:darkgreen;
+}
+nav{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    min-height: 60px;
+    justify-content: flex-end;
+    background-color: cadetblue;
+}
+ul{
+    display: flex;
+    justify-content: center;
+}
+li  {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    list-style-type: none;
+    float: left;
+    padding:20px;
+    font-size: 25px;
+    text-decoration: none;
+}
+a{
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+form div {
+    margin-bottom: 20px;
+    display: flex;
+
+
+}
+form div label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.form-info{
+    justify-content: space-between;
+    gap: 20px;
+}
+input,textarea{
+    min-height: 30px;
+    border: 1px solid darkgreen;
+    background-color: rgba(52, 139, 136, 0.15);
+    color: darkslategray;
+    font-size: 20px;
+    padding: 5px 5px;
+    outline: none;
+    border-radius: 15px;
+}
+textarea{
+    resize: none;
+    min-height: 200px;
+
+}
+.form-back{
+    width: 1000px;
+    background-color: rgba(83, 227, 132, 0.25);
+
+}
+.form-button{
+    display: flex;
+    justify-content: center;
+}
+.form-button input{
+    color: darkslategrey;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.form-button input:hover{
+    background-color: lightseagreen;
+}
+.post{
+    background-color: rgba(33, 126, 64, 0.05);position: absolute; top:130px; left: 130px;right: 130px;border-radius: 10px
+}
+.postsList{
+   display: flex;
+   flex-direction: column;
+}
+.onePost{
+    background-color: rgba(83, 227, 132, 0.15);
+    border-radius: 16px;
+}
+.delete-btn{
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px 15px;
+    float: right;
+    bottom:10px;
+    right: 15px;
+    position: relative;
+    background-color:rgba(20, 222, 187, 0.36);
+}
+.delete-btn:hover{
+    cursor: pointer;
+    background-color:rgba(20, 222, 187, 1);
+}
+.edit-btn{
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px 15px;
+    float: right;
+    bottom:10px;
+    right: 25px;
+    position: relative;
+    background-color:rgba(20, 222, 187, 0.36);
+}
+.edit-btn:hover{
+    cursor: pointer;
+    background-color:rgba(20, 222, 187, 1);
+}
